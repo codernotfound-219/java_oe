@@ -12,5 +12,8 @@ class Main {
 		
 		Animal bird = new Bird ("ostrich", false, "omnivore");
 		bird.display();
+
+    Bird flyingBird = new FlyingBird ("eagle", false, "omnivore", 100, 25);
+    flyingBird.display();
 	}
 }

@@ -18,3 +18,4 @@ public class Bird extends Animal {
 		System.out.println("Animal::Bird::name="+this.getName()+ ", typeOfFood="+ typeOfFood+", hasBackbone="+ hasBackbone+ ", canFly="+canFly  +", hasFeathers=" + hasFeathers);
 	}
 }
+
