@@ -1,52 +1,45 @@
 package inheritance;
+import java.util.Random;
 
-public class Animal {
-	protected boolean hasBackbone;
-	protected String typeOfFood;
-	private String name;
-	
-	public Animal (String name) {
-		this.name = name;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void display() {
-		System.out.println("Animal::name="+name+ ", typeOfFood="+ typeOfFood+", hasBackbone="+ hasBackbone);
-	}	
+public abstract class Animal {
+  protected boolean hasBackbone;
+  protected String typeOfFood;
+  private String name;
+
+  private String code;
+  private void createCode() {
+    Random rand = new Random();
+    this.code = name + rand.nextInt(100);
+  }
+
+  public Animal(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getCode() {
+    if (code == null) {
+      this.createCode();
+    }
+    return code;
+  }
+
+  abstract void display(); // ABSTRACT METHOD
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-import java.util.Random;
-	private String code;
-	private void createCode() {
-		Random rand = new Random();
-		this.code = name + rand.nextInt(100);
-	}
-	
-	public String getCode() {
-		return this.code;
-	}
-	
-*/
-
+ * import java.util.Random;
+ * private String code;
+ * private void createCode() {
+ * Random rand = new Random();
+ * this.code = name + rand.nextInt(100);
+ * }
+ * 
+ * public String getCode() {
+ * return this.code;
+ * }
+ * 
+ */

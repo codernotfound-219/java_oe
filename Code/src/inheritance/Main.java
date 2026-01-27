@@ -14,6 +14,8 @@ class Main {
 		bird.display();
 
     Bird flyingBird = new FlyingBird ("eagle", false, "omnivore", 100, 25);
+    String code = flyingBird.getCode();
     flyingBird.display();
+    System.out.println(code);
 	}
 }
