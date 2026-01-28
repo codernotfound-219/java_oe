@@ -9,4 +9,8 @@ class Base {
     a = a;
     b = 0;
   }
+
+  public void display() {
+    System.out.println("BaseState: a= " +a+ ", b= " +b);
+  }
 };
