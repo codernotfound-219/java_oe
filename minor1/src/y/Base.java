@@ -1,4 +1,4 @@
-package x;
+package y;
 
 class Base {
   private int a;
