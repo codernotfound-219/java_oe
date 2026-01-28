@@ -1,7 +1,7 @@
 package y;
 
 class Base {
-  private int a;
+  protected int a;
   protected int b;
   int c;
 

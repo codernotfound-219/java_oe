@@ -1,0 +1,6 @@
+src/y/Main.java:6: error: cannot find symbol
+    childRef.display();
+            ^
+  symbol:   method display()
+  location: variable childRef of type Base
+1 error

@@ -4,7 +4,7 @@ class Child extends Base {
   private int d;
   Child(int a, int b, int c, int d) {
     d= d;
-    Base(a);
+    super(a);
     b=b;
     c=c;
   }
