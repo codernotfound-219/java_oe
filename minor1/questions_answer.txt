@@ -1,0 +1,16 @@
+src/x/Base.java:8: error: <identifier> expected
+  Base(a) {
+        ^
+src/y/Child.java:5: error: <identifier> expected
+  Child(a, b, c, d) {
+         ^
+src/y/Child.java:5: error: <identifier> expected
+  Child(a, b, c, d) {
+            ^
+src/y/Child.java:5: error: <identifier> expected
+  Child(a, b, c, d) {
+               ^
+src/y/Child.java:5: error: <identifier> expected
+  Child(a, b, c, d) {
+                  ^
+5 errors
