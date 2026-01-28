@@ -5,7 +5,7 @@ class Base {
   protected int b;
   int c;
 
-  Base(a) {
+  Base(int a) {
     a = a;
     b = 0;
   }

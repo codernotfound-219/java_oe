@@ -1,0 +1,30 @@
+src/y/Child.java:3: error: cannot find symbol
+class Child extends Base {
+                    ^
+  symbol: class Base
+src/y/Child.java:7: error: cannot find symbol
+    Base(a);
+    ^
+  symbol:   method Base(int)
+  location: class Child
+src/y/Child.java:13: error: cannot find symbol
+    System.out.println("ChildState: a= " +a+
+                                          ^
+  symbol:   variable a
+  location: class Child
+src/y/Child.java:14: error: cannot find symbol
+      ", b= " +b+ ", c=" +c+ ", d= " + d
+               ^
+  symbol:   variable b
+  location: class Child
+src/y/Child.java:14: error: cannot find symbol
+      ", b= " +b+ ", c=" +c+ ", d= " + d
+                          ^
+  symbol:   variable c
+  location: class Child
+src/y/Main.java:5: error: cannot find symbol
+    Base childRef = new Child(1, 2, 3, 4);
+    ^
+  symbol:   class Base
+  location: class Main
+6 errors

@@ -2,7 +2,7 @@ package y;
 
 class Child extends Base {
   private int d;
-  Child(a, b, c, d) {
+  Child(int a, int b, int c, int d) {
     d= d;
     Base(a);
     b=b;
