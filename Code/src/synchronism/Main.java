@@ -8,5 +8,7 @@ public class Main {
 
     th1.start();
     th2.start();
+    th1.display();
+    th2.display();
   }
 }

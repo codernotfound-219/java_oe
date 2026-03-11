@@ -9,6 +9,10 @@ public class CounterManipulatingThread extends Thread {
     this.sharedData = sd;
   }
 
+  public void display() {
+    sharedData.display();
+  }
+
   @Override
   public void run() {
     for (int i = 0; i < 10000; i++) {
@@ -20,7 +24,5 @@ public class CounterManipulatingThread extends Thread {
         sharedData.decrement();
       }
     }
-    
-    sharedData.display();
   }
 }
