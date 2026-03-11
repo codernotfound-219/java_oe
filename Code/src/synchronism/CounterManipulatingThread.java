@@ -11,7 +11,7 @@ public class CounterManipulatingThread extends Thread {
 
   @Override
   public void run() {
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10000; i++) {
       if (id == 1) {
         sharedData.increment();
       }
@@ -19,8 +19,8 @@ public class CounterManipulatingThread extends Thread {
       if (id == 2) {
         sharedData.decrement();
       }
-
-      sharedData.display();
     }
+    
+    sharedData.display();
   }
 }
