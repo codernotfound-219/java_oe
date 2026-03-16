@@ -8,6 +8,14 @@ public class Main {
 
     th1.start();
     th2.start();
+
+    try {
+      th1.join(); 
+      th2.join();
+    } catch (InterruptedException e) {
+      System.out.println("Unexpected Interrupt: " + e.getMessage());
+    }
+
     th1.display();
     th2.display();
   }
