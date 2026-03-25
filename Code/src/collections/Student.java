@@ -1,6 +1,5 @@
 package collections;
 
-
 public class Student implements Comparable {
   protected String name;
   protected String rollNo;
@@ -13,7 +12,7 @@ public class Student implements Comparable {
   }
 
   public String toString() {
-    return ("Rollno=" + rollNo + ", name=" + name);
+    return ("Rollno= " + rollNo + ", name= " + name + ", cgpa= " + cg);
   }
 
   public void display() {

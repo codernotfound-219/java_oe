@@ -2,6 +2,11 @@ package collections;
 
 import java.util.ArrayList;
 
+// TODO:
+// Class: Student Generating Thread -> extends thread
+// one thread generates student (roll -> CS)
+// the other thread generates student (roll -> CH)
+
 public class SharedData {
   private ArrayList<Student> list;
 
