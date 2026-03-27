@@ -1,5 +1,34 @@
-.DS_Store
-./**/bin
+# --- Build Artifacts ---
+# Maven build output
+target/
+*.jar
+*.war
+*.ear
+
+# --- IDE Specifics ---
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+gen/
+
+# Eclipse
+.settings/
+.project
+.classpath
+.factorypath
+
+# VS Code
+.vscode/
+
+# --- Compiled Java Files ---
+# Strictly speaking, 'target/' covers this for Maven, 
+# but this is a fail-safe for manual compilations.
 *.class
 
-.idea/
+# --- OS Specifics ---
+.DS_Store
+Thumbs.db
+
+# --- Log files ---
+*.log

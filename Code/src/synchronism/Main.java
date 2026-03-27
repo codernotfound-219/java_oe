@@ -3,7 +3,6 @@ package synchronism;
 public class Main {
   public static void main(String[] args) {
     SharedData sd = new SharedData(0);
-    boolean t1Finished = false, t2Finished = false;
     CounterManipulatingThread th1 = new CounterManipulatingThread(1, sd);
     CounterManipulatingThread th2 = new CounterManipulatingThread(2, sd);
 
@@ -12,21 +11,12 @@ public class Main {
 
     try {
       th1.join(); 
-      t1Finished = true;
+      th2.join();
     } catch (InterruptedException e) {
-      System.out.println("Unexpected Interrupt (Thread 1): " + e.getMessage());
+      System.out.println("Unexpected Interrupt on main: " + e.getMessage());
     }
 
-    try {
-      th2.join(); 
-      t2Finished = true;
-    } catch (InterruptedException e) {
-      System.out.println("Unexpected Interrupt (Thread 2): " + e.getMessage());
-    }
+    sd.display();
 
-    if (t1Finished && t2Finished) {
-      th1.display();
-      th2.display();
-    }
   }
 }
