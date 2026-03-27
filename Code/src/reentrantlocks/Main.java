@@ -7,7 +7,10 @@ public class Main {
     Client cl1 = new Client(db);
     Client cl2 = new Client(db);
 
-    cl1.start();
-    cl2.start();
+    Thread A = new Thread(cl1, "Thread-Alpha");
+    Thread B = new Thread(cl2, "Thread-Beta");
+
+    A.start();
+    B.start();
   }
 }

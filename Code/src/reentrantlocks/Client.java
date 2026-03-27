@@ -1,6 +1,6 @@
 package reentrantlocks;
 
-public class Client extends Thread {
+public class Client implements Runnable {
   private final SecureDatabase db;
 
   public Client(SecureDatabase d) {
