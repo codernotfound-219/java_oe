@@ -10,21 +10,13 @@ public class Service {
 
   public int getCount() { return circle; }
   public int getTotal() { return N; }
+  public int getPerThreadCount() { return perThread; }
 
-  private boolean isCircle(double x, double y) {
+  public boolean isCircle(double x, double y) {
     return x*x + y*y <= 1;
   }
 
-  private synchronized void increment() {
-    circle++;
-  }
-
-  public void operation() {
-    for (int i = 0; i<perThread; i++) {
-      double x = Math.random();
-      double y = Math.random();
-
-      if (isCircle(x, y)) increment();
-    }
+  public synchronized void update(int delta) {
+    circle += delta;
   }
 }
