@@ -24,7 +24,7 @@ public class Main {
     }
 
     double circle = sc.getCount();
-    double square = 4 * sc.getTotal();
+    double square = sc.getTotal();
 
     double pi = 4 * (circle/square);
     System.out.println("Pi = " + pi);

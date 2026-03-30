@@ -2,7 +2,9 @@ import java.lang.Math;
 
 public class Service {
   private int circle;
-  private final int N = 1000000;
+  private final int N = 10000000;
+  private final int totalThreads = 4;
+  private final int perThread = N/totalThreads;
 
   public Service() { circle = 0; }
 
@@ -18,7 +20,7 @@ public class Service {
   }
 
   public void operation() {
-    for (int i = 0; i<N; i++) {
+    for (int i = 0; i<perThread; i++) {
       double x = Math.random();
       double y = Math.random();
 
