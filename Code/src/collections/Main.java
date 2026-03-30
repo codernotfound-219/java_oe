@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.TreeSet;
 
 public class Main {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+    /*
     ArrayList<Student> studentArrayList = new ArrayList<>();
     Student s1 = new Student("24cs001", "Gopal", 9);
     Student s2 = new Student("24cs002", "Govind", 8);
@@ -40,6 +41,25 @@ public class Main {
 
     CollectionHelper.printCollection(studentArrayList);
     CollectionHelper.printCollection(studentTreeSet);
+  */
 
+    ArrayList<Student> ls = new ArrayList<Student>();
+    SharedData s = new SharedData(ls);
+    StudentGeneratingThread th1 = new StudentGeneratingThread(1, s, "23CSB0B", 64);
+    StudentGeneratingThread th2 = new StudentGeneratingThread(2, s, "22CHB0A", 64);
+
+
+    th1.start();
+    th2.start();
+
+    try {
+      th1.join();
+      th2.join();
+    } catch (InterruptedException e) {
+      System.out.println("CRITICAL ERROR: main thread interrupted prematurely");
+      e.printStackTrace();
+    }
+
+    s.display();
   }
 }
